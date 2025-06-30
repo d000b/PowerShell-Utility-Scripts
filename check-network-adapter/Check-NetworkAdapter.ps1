@@ -8,7 +8,6 @@ $now = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 # Получаем информацию об адаптере
 $adapter = Get-NetAdapter -Name $adapterName -ErrorAction SilentlyContinue
 
-Start-Transcript -Path $logFile -Append
 if (-not $adapter) {
     Write-Host "$now [$adapterName] Adapter not found!" -ForegroundColor Red
     Stop-Transcript
@@ -38,5 +37,3 @@ if ($currentSpeedBits -lt $expectedSpeed) {
 } else {
     Write-Host "$now [$adapterName] [NICE] Link speed: $currentSpeed"
 }
-
-Stop-Transcript

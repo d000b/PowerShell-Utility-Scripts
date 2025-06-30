@@ -41,8 +41,7 @@
   </Settings>
   <Actions Context="Author">
     <Exec>
-      <Command>powershell.exe</Command>
-      <Arguments>-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "F:\PowerShell-Utility-Scripts\check-network-adapter\Check-NetworkAdapter.ps1"</Arguments>
+      <Command>F:\PowerShell-Utility-Scripts\check-network-adapter\Wrapper(Check-NetworkAdapter).cmd</Command>
     </Exec>
   </Actions>
 </Task>
