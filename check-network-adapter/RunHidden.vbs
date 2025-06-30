@@ -1,2 +1,8 @@
-Set objShell = CreateObject("Wscript.Shell")
-objShell.Run "powershell.exe -ExecutionPolicy Bypass -NoProfile -File ""F:\PowerShell-Utility-Scripts\check-network-adapter\Check-NetworkAdapter.ps1""", 0, False
+Set shell = CreateObject("WScript.Shell")
+
+script = "F:\PowerShell-Utility-Scripts\Check-NetworkAdapter.ps1"
+logger = "F:\PowerShell-Utility-Scripts\adapter-check.log"
+
+params = "-NoProfile -ExecutionPolicy Bypass -NoLogo -NonInteractive -WindowStyle Hidden"
+
+shell.Run "powershell.exe " & params & " -File '" & script & "' >> '" & logger & "' 2>&1", 0
