@@ -1,7 +1,8 @@
 Set shell = CreateObject("WScript.Shell")
 
-script = "F:\PowerShell-Utility-Scripts\Check-NetworkAdapter.ps1"
-logger = "F:\PowerShell-Utility-Scripts\adapter-check.log"
+base_path = "F:\PowerShell-Utility-Scripts\check-network-adapter\"
+script = base_path + "Check-NetworkAdapter.ps1"
+logger = base_path + "(Check-NetworkAdapter).log"
 
 params = "-NoProfile -ExecutionPolicy Bypass -NoLogo -NonInteractive -WindowStyle Hidden"
 
