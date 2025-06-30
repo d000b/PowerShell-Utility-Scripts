@@ -1,6 +1,4 @@
 # Требует запуска от имени администратора
-$logFile = "F:\PowerShell-Utility-Scripts\check-network-adapter\(Check-NetworkAdapter).log"
-
 $adapterName = "Ethernet 2"
 $expectedSpeed = 100 * 1e6 # 100 Мбит/с в битах
 $now = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
